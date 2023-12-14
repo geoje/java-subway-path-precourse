@@ -1,5 +1,7 @@
 package subway.controller;
 
+import subway.constant.MainChoice;
+import subway.constant.WeightChoice;
 import subway.view.InputView;
 import subway.view.OutputView;
 
@@ -24,10 +26,17 @@ public class SubwayController {
     }
 
     public void run() {
+        MainChoice mainChoice = requestMainChoice();
+        WeightChoice weightChoice = requestWeightChoice();
+    }
+
+    public MainChoice requestMainChoice() {
         OutputView.printMain();
-        inputView.readFunction();
+        return requestUntilValidated(() -> MainChoice.from(inputView.readFunction()));
+    }
+
+    public WeightChoice requestWeightChoice() {
         OutputView.printWeightCondition();
-        inputView.readFunction();
-        // TODO: Enum 클래스로 메인 함수 결과와 가중치 선택을 만들고 해당 자료형으로 진행
+        return requestUntilValidated(() -> WeightChoice.from(inputView.readFunction()));
     }
 }
