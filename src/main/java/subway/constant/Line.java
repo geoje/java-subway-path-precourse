@@ -26,12 +26,12 @@ public enum Line {
         this.time = time;
     }
 
-    public String getDeparture() {
-        return departure.toString();
+    public Station getDeparture() {
+        return departure;
     }
 
-    public String getDestination() {
-        return destination.toString();
+    public Station getDestination() {
+        return destination;
     }
 
     public int getDistance() {
