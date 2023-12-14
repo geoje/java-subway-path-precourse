@@ -4,7 +4,7 @@ import subway.constant.GeneralMessage;
 
 import java.util.Scanner;
 
-import static subway.constant.GeneralMessage.REQUEST_FUNCTION;
+import static subway.constant.GeneralMessage.*;
 
 public class InputView {
     private final Scanner scanner;
@@ -22,5 +22,13 @@ public class InputView {
 
     public String readFunction() {
         return readWithGeneralMessage(REQUEST_FUNCTION);
+    }
+
+    public String readDeparture() {
+        return readWithGeneralMessage(REQUEST_DEPARTURE);
+    }
+
+    public String readDestination() {
+        return readWithGeneralMessage(REQUEST_DESTINATION);
     }
 }
