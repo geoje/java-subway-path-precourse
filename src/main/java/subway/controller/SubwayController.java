@@ -55,15 +55,17 @@ public class SubwayController {
 
 
     public void run() {
-        MainChoice mainChoice = requestMainChoice();
-        if (mainChoice == MainChoice.QUIT) {
-            return;
-        }
-        WeightChoice weightChoice = requestWeightChoice();
-        Station departure = requestDeparture();
-        Station destination = requestDestination();
+        while (true) {
+            MainChoice mainChoice = requestMainChoice();
+            if (mainChoice == MainChoice.QUIT) {
+                return;
+            }
+            WeightChoice weightChoice = requestWeightChoice();
+            Station departure = requestDeparture();
+            Station destination = requestDestination();
 
-        CostMeter costMeter = new CostMeter(weightChoice, departure, destination);
-        notifyResult(costMeter);
+            CostMeter costMeter = new CostMeter(weightChoice, departure, destination);
+            notifyResult(costMeter);
+        }
     }
 }

@@ -38,7 +38,7 @@ public class ApplicationTest {
     @Test
     @DisplayName("기능_테스트")
     void FunctionTest() {
-        systemIn("1", "1", "교대역", "양재역");
+        systemIn("1", "1", "교대역", "양재역", "Q");
         Application.main(new String[]{});
 
         standardOut.println(getOutput());
