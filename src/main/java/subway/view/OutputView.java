@@ -18,9 +18,11 @@ public class OutputView {
 
     public static void printMain() {
         printGeneralMessage(NOTIFY_MAIN);
+        System.out.println();
     }
 
     public static void printWeightCondition() {
         printGeneralMessage(NOTIFY_WEIGHT_CONDITION);
+        System.out.println();
     }
 }

@@ -15,7 +15,9 @@ public class InputView {
 
     private String readWithGeneralMessage(GeneralMessage message, Object... args) {
         System.out.printf(message.toString() + "%n", args);
-        return scanner.nextLine().trim();
+        String result = scanner.nextLine().trim();
+        System.out.println();
+        return result;
     }
 
     public String readFunction() {
