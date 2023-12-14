@@ -56,6 +56,9 @@ public class SubwayController {
 
     public void run() {
         MainChoice mainChoice = requestMainChoice();
+        if (mainChoice == MainChoice.QUIT) {
+            return;
+        }
         WeightChoice weightChoice = requestWeightChoice();
         Station departure = requestDeparture();
         Station destination = requestDestination();
