@@ -18,7 +18,7 @@
 
 예외 상황이 생기면 `[ERROR]` 로 시작하는 메세지를 출력한 후 다시 입력을 받습니다.
 
-### 1️⃣ 메인 화면 출력과 기능 입력
+### 1️⃣ 메인 화면 출력과 기능 입력 ✔️
 
 <table>
 <tr>
@@ -28,27 +28,27 @@
 <tr>
 <td><ul>
     <li>
-        메인 화면 출력<br>
+        메인 화면 출력 ✔️<br>
         <code>## 메인 화면</code><br>
         <code>1. 경로 조회</code><br>
         <code>Q. 종료</code>
     </li>
     <li>
-        질문에 해당하는 아래 메세지 출력<br>
+        질문에 해당하는 아래 메세지 출력 ✔️<br>
         <code>## 원하는 기능을 선택하세요.</code>
     </li>
-    <li>기능을 입력받고 잘 입력 받았는지 체크</li>
+    <li>기능을 입력받고 잘 입력 받았는지 체크 ✔️</li>
 </ul></td>
 <td><ul>
     <li>
-        입력받은 기능이 존재하지 않을 경우<br>
+        입력받은 기능이 존재하지 않을 경우 ✔️<br>
         <code>[ERROR] 해당 기능은 존재하지 않습니다. 다시 입력해 주세요.</code>
     </li>
 </ul></td>
 </tr>
 </table>
 
-### 2️⃣ 경로 기준 출력과 기능 입력
+### 2️⃣ 경로 기준 출력과 기능 입력 ✔️
 
 <table>
 <tr>
@@ -58,21 +58,21 @@
 <tr>
 <td><ul>
     <li>
-        경로 기준 출력<br>
+        경로 기준 출력 ✔️<br>
         <code>## 경로 기준</code><br>
         <code>1. 최단 거리</code><br>
         <code>2. 최소 시간</code><br>
         <code>B. 돌아가기</code>
     </li>
     <li>
-        질문에 해당하는 아래 메세지 출력<br>
+        질문에 해당하는 아래 메세지 출력 ✔️<br>
         <code>## 원하는 기능을 선택하세요.</code>
     </li>
-    <li>기능을 입력받고 잘 입력 받았는지 체크</li>
+    <li>기능을 입력받고 잘 입력 받았는지 체크 ✔️</li>
 </ul></td>
 <td><ul>
     <li>
-        입력받은 기능이 존재하지 않을 경우<br>
+        입력받은 기능이 존재하지 않을 경우 ✔️<br>
         <code>[ERROR] 해당 기능은 존재하지 않습니다. 다시 입력해 주세요.</code>
     </li>
 </ul></td>
@@ -89,27 +89,27 @@
 <tr>
 <td><ul>
     <li>
-        질문에 해당하는 아래 메세지 출력<br>
+        질문에 해당하는 아래 메세지 출력 ✔️<br>
         <code>## 출발역을 입력하세요.</code>
     </li>
-    <li>출발역을 입력받고 잘 입력 받았는지 체크</li><br>
+    <li>출발역을 입력받고 잘 입력 받았는지 체크 ✔️</li><br>
     <li>
-        출발역을 정상적으로 받았을 경우 아래 메세지 출력<br>
+        출발역을 정상적으로 받았을 경우 아래 메세지 출력 ✔️<br>
         <code>## 도착역을 입력하세요.</code>
     </li>
     <li>도착역을 입력받고 잘 입력 받았는지 체크</li>
 </ul></td>
 <td><ul>
     <li>
-        입력받은 역이 존재하지 않을 경우<br>
+        입력받은 역이 존재하지 않을 경우 ✔️<br>
         <code>[ERROR] 해당 역은 존재하지 않습니다. 다시 입력해 주세요.</code>
     </li>
     <li>
-        출발역과 도착역이 같을 경우<br>
+        출발역과 도착역이 같을 경우 ✔️<br>
         <code>[ERROR] 출발역과 도착역이 동일합니다. 다시 입력해 주세요.</code>
     </li>
     <li>
-        출발역과 도착역이 연결되어 있지 않으면 에러를 출력<br>
+        출발역과 도착역이 연결되어 있지 않으면 에러를 출력 ✔️<br>
         <code>[ERROR] 연결된 노선을 찾을 수 없습니다. 다시 입력해 주세요.</code>
     </li>
 </ul></td>
@@ -161,7 +161,7 @@
         <th>Description</th>
     </tr>
     <tr>
-        <td rowspan="2">
+        <td rowspan="6">
             <img src="https://raw.githubusercontent.com/mallowigi/iconGenerator/master/assets/icons/folders/constants.svg?sanitize=true"/>
             <b> constant</b>
         </td>
@@ -173,24 +173,36 @@
         <td>일반 적인 입력 요청 또는 결과 알림에 사용 되는 메세지</td>
     </tr>
     <tr>
+        <td><b>Line</b></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><b>MainChoice</b></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><b>Station</b></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><b>WeightChoice</b></td>
+        <td></td>
+    </tr>
+    <tr>
         <td>
             <img src="https://raw.githubusercontent.com/mallowigi/iconGenerator/master/assets/icons/folders/controllers.svg?sanitize=true"/>
             <b> controller</b>
         </td>
-        <td><b>XXXXController</b></td>
+        <td><b>SubwayController</b></td>
         <td>입력을 받아 계산하고 출력 해주는 전체 진행 담당 컨트롤러</td>
     </tr>
     <tr>
-        <td rowspan="2">
+        <td>
             <img src="https://raw.githubusercontent.com/mallowigi/iconGenerator/master/assets/icons/folders/home.svg?sanitize=true"/>
             <b> domain</b>
         </td>
-        <td><b>XXXX</b></td>
-        <td>XXXX</td>
-    </tr>
-    <tr>
-        <td><b>XXXX</b></td>
-        <td>XXXX</td>
+        <td><b>CostMeter</b></td>
+        <td></td>
     </tr>
     <tr>
         <td rowspan="2">
