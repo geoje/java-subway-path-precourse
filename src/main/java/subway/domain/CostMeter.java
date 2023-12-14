@@ -30,7 +30,7 @@ public class CostMeter {
                     line.getDistance()
             );
             timeGraph.setEdgeWeight(
-                    distGraph.addEdge(line.getDeparture(), line.getDestination()),
+                    timeGraph.addEdge(line.getDeparture(), line.getDestination()),
                     line.getTime()
             );
         }
@@ -47,17 +47,17 @@ public class CostMeter {
         if (weightChoice == WeightChoice.MIN_DISTANCE) {
             dijkstraShortestPath = new DijkstraShortestPath<>(distGraph);
 
-            totalDistance = (int) dijkstraShortestPath.getPathWeight(departure, destination);
-            totalTime = 0;
             route = dijkstraShortestPath.getPath(departure, destination).getVertexList();
+            totalDistance = (int) dijkstraShortestPath.getPathWeight(departure, destination);
+            totalTime = calcRouteWeight(timeGraph, route);
             return;
         }
         if (weightChoice == WeightChoice.MIN_TIME) {
             dijkstraShortestPath = new DijkstraShortestPath<>(timeGraph);
 
-            totalDistance = 0;
-            totalTime = (int) dijkstraShortestPath.getPathWeight(departure, destination);
             route = dijkstraShortestPath.getPath(departure, destination).getVertexList();
+            totalTime = (int) dijkstraShortestPath.getPathWeight(departure, destination);
+            totalDistance = calcRouteWeight(distGraph, route);
             return;
         }
 
@@ -70,6 +70,17 @@ public class CostMeter {
         if (departure.toString().equals(destination.toString())) {
             throw new IllegalArgumentException(SAME_STATION_DEPART_AND_DEST.toString());
         }
+    }
+
+    private int calcRouteWeight(
+            WeightedMultigraph<Station, DefaultWeightedEdge> graph,
+            List<Station> stations
+    ) {
+        int weight = 0;
+        for (int i = 1; i < stations.size(); i++) {
+            weight += (int) graph.getEdgeWeight(graph.getEdge(stations.get(i - 1), stations.get(i)));
+        }
+        return weight;
     }
 
     public int getTotalDistance() {
